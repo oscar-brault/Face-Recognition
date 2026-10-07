@@ -12,7 +12,7 @@
 ![Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-[Report (PDF)](report/IEEE_Report_Deep_Learning.pdf) · [Notebook](notebooks/TP7_Oscar_Brault.ipynb) · [Results](#-results)
+[Report (PDF)](report/IEEE_Report_Deep_Learning.pdf) · [Notebook](notebooks/TP7_Oscar_Brault.ipynb) · [Results](#results)
 
 </div>
 
