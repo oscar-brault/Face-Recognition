@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧑‍💻 Face Recognition with Deep Learning
+#  Face Recognition with Deep Learning
 
 **Detect · Align · Encode · Recognize** — a complete face recognition pipeline built with Python, OpenCV and dlib.
 
@@ -18,7 +18,7 @@
 
 ---
 
-## 📖 About
+##  About
 
 This project was carried out at **ESIEE Paris** (AI & Deep Learning course, 2025). The goal is to build a face recognition system that works on **images and videos**, balancing **accuracy** and **speed**, while staying lightweight enough to run on limited computing resources.
 
@@ -26,7 +26,7 @@ Instead of training a large convolutional network directly on pixels, each face 
 
 A full write‑up in IEEE format is available in [`report/`](report/IEEE_Report_Deep_Learning.pdf).
 
-## 🧠 Pipeline
+##  Pipeline
 
 ```mermaid
 flowchart LR
@@ -44,7 +44,7 @@ flowchart LR
 | **3. Encoding** | Converts each face into a 128‑D vector, trained with a *triplet loss* (FaceNet‑style) | dlib ResNet face encoder |
 | **4. Recognition** | Predicts the identity from the vector | scikit‑learn classifiers |
 
-## 📊 Results
+##  Results
 
 ### From raw pixels to encodings
 
@@ -79,13 +79,13 @@ A small CNN trained directly on cropped faces reaches **74 %** accuracy on the t
 
 We built our own dataset from short videos of **9 people** (~100 frames extracted per video, one folder per person). The SVM reaches **100 % accuracy** on it, and can be extended simply by adding a new folder for a new person.
 
-> 🔒 For privacy reasons, the dataset and the images of real people are **not** included in this repository.
+>  For privacy reasons, the dataset and the images of real people are **not** included in this repository.
 
 ### Bias analysis (extra)
 
 The report discusses how unbalanced data leads to unfair performance across demographic groups, and which metrics to monitor per group (accuracy, FPR, FNR, precision, recall, F1‑score). See section *F. Extra – Bias analysis* of the [report](report/IEEE_Report_Deep_Learning.pdf).
 
-## 🗂️ Repository structure
+##  Repository structure
 
 ```
 .
@@ -99,7 +99,7 @@ The report discusses how unbalanced data leads to unfair performance across demo
 └── README.md
 ```
 
-## 🚀 Getting started
+##  Getting started
 
 ### 1. Clone and install
 
@@ -112,7 +112,7 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-> ℹ️ `dlib` needs CMake and a C++ compiler to build. With Anaconda you can also run `conda install -c conda-forge dlib`.
+>  `dlib` needs CMake and a C++ compiler to build. With Anaconda you can also run `conda install -c conda-forge dlib`.
 
 ### 2. Download the dlib models
 
@@ -147,7 +147,7 @@ You can extract frames from a video with the helper function included in the not
 jupyter notebook notebooks/TP7_Oscar_Brault.ipynb
 ```
 
-> ⚠️ The notebook was developed on **Kaggle**: paths such as `/kaggle/input/...` must be adapted to your local folders.
+>  The notebook was developed on **Kaggle**: paths such as `/kaggle/input/...` must be adapted to your local folders.
 
 ### 5. Recognize faces in a video or webcam
 
@@ -156,18 +156,18 @@ process_movie("path/to/video.mp4", outvideo_name="result.mp4")   # video file
 process_movie(0)                                                  # webcam
 ```
 
-## 🔧 Tech stack
+##  Tech stack
 
 `Python` · `OpenCV` · `dlib` · `Keras / TensorFlow` · `scikit-learn` · `NumPy` · `Matplotlib`
 
-## 🔭 Possible improvements
+##  Possible improvements
 
 - Compare more detectors/encoders (e.g. modern PyTorch‑based models)
 - Quantitative per‑group fairness evaluation on a larger, more diverse dataset
 - Open‑set recognition (rejecting unknown faces with a distance threshold)
 - Real‑time optimization for webcam streams
 
-## 📚 References
+##  References
 
 1. J. Sebastian, *Reconocimiento facial mediante el uso de PCA y algoritmo de reconocimiento Viola‑Jones*, 2018.
 2. F. Schroff, D. Kalenichenko, J. Philbin, [*FaceNet: A unified embedding for face recognition and clustering*](https://doi.org/10.1109/cvpr.2015.7298682), CVPR 2015.
@@ -175,14 +175,14 @@ process_movie(0)                                                  # webcam
 4. V. Kazemi, J. Sullivan, [*One millisecond face alignment with an ensemble of regression trees*](https://doi.org/10.1109/cvpr.2014.241), CVPR 2014.
 5. O. M. Parkhi, A. Vedaldi, A. Zisserman, *Deep Face Recognition*, 2015.
 
-## 👥 Authors
+##  Authors
 
 - **Oscar Brault** — [GitHub](https://github.com/<your-username>) · [LinkedIn](https://www.linkedin.com/in/<your-profile>)
 - **Victor Chen** — [GitHub](https://github.com/<victor-username>)
 
 ESIEE Paris — AI & Deep Learning, 2025.
 
-## 🙏 Acknowledgements
+##  Acknowledgements
 
 This assignment is based on Adam Geitgey's article [*Machine Learning is Fun! Part 4: Modern Face Recognition with Deep Learning*](https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78). Course material provided by ESIEE Paris.
 
