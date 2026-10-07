@@ -2,7 +2,7 @@
 
 #  Face Recognition with Deep Learning
 
-**Detect · Align · Encode · Recognize**  a complete face recognition pipeline built with Python, OpenCV and dlib.
+**Detect · Align · Encode · Recognize** a complete face recognition pipeline built with Python, OpenCV and dlib.
 
 ![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=white)
@@ -22,7 +22,7 @@
 
 This project was carried out at **ESIEE Paris** (AI & Deep Learning course, 2025). The goal is to build a face recognition system that works on **images and videos**, balancing **accuracy** and **speed**, while staying lightweight enough to run on limited computing resources.
 
-Instead of training a large convolutional network directly on pixels, each face is turned into a compact **128‑dimensional vector** by a pre‑trained ResNet encoder. Recognizing a person then boils down to a simple classification (or distance computation) on these vectors — fast to train, fast to run, and easy to extend to new people **without retraining a deep network**.
+Instead of training a large convolutional network directly on pixels, each face is turned into a compact **128‑dimensional vector** by a pre‑trained ResNet encoder. Recognizing a person then boils down to a simple classification (or distance computation) on these vectors fast to train, fast to run, and easy to extend to new people **without retraining a deep network**.
 
 A full write‑up in IEEE format is available in [`report/`](report/IEEE_Report_Deep_Learning.pdf).
 
@@ -30,11 +30,11 @@ A full write‑up in IEEE format is available in [`report/`](report/IEEE_Report_
 
 ```mermaid
 flowchart LR
-    A[📷 Image / Video] --> B[Face detection<br/>HOG · CNN]
+    A[Image / Video] --> B[Face detection<br/>HOG · CNN]
     B --> C[Pose estimation<br/>68 landmarks + alignment]
     C --> D[Face encoding<br/>ResNet → 128‑D vector]
     D --> E[Classifier<br/>SVM · kNN · LogReg · MLP]
-    E --> F[🏷️ Identity]
+    E --> F[Identity]
 ```
 
 | Step | What it does | Tool |
